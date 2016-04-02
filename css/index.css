@@ -16,8 +16,8 @@
 }
 
 .navbar {
-    margin-top: 30px;
-    margin-left: 20px;
+    position: absolute;
+    right:10px;
 }
 
 .nav li a {
@@ -36,3 +36,27 @@
     float: right;
 }
 
+.navbar li a:active {
+    color: darkred;
+}
+
+.search {
+    margin-top: 15px;
+}
+
+.searchBox {
+    height: 23px;
+    width: 120px;
+    border: 1.5px solid #000;
+    vertical-align: bottom;
+    background-color: gainsboro;
+    border-radius: 3px;
+}
+
+.searchIcon {
+    vertical-align: bottom;
+}
+
+.top-bar {
+    float: right;
+}

@@ -33,7 +33,6 @@
 .cart-logo {
     height: 90px;
     width: 60px;
-    float: right;
 }
 
 .navbar li a:active {
@@ -42,12 +41,13 @@
 
 .search {
     margin-top: 15px;
+    text-align: right;
 }
 
 .searchBox {
     height: 23px;
     width: 120px;
-    border: 1.5px solid #000;
+    border: 1px solid #000;
     vertical-align: bottom;
     background-color: gainsboro;
     border-radius: 3px;
@@ -58,5 +58,6 @@
 }
 
 .top-bar {
-    float: right;
+    margin:auto;
+    text-align: right;
 }

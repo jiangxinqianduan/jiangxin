@@ -60,3 +60,82 @@
 .top-bar {
     float: right;
 }
+
+.knife{
+    background-image: url("../images/hot-1_03.png");
+    height:218px;
+    width:313px;
+    margin:auto;
+    left:0px;
+    right:0px;
+}
+
+.tea{
+    background-image: url("../images/hot-2_03.png");
+    height:218px;
+    width:313px;
+    margin:auto;
+    left:0px;
+    right:0px;
+
+}
+
+.sun{
+    background-image:url("../images/hot-3_03.png");
+    height:218px;
+    width:313px;
+    margin:auto;
+    left:0px;
+    right:0px;
+    
+
+}
+.littleblack{
+
+
+    width:80%;
+    margin:auto;
+        margin-top: 20px;
+    left:0px;
+    right:0px;
+}
+
+.smallblack{
+    width:80%;
+    margin:auto;
+    left:0px;
+    right:0px;
+}
+
+.bottle{
+    width:211px;
+    height:296px;
+
+
+}
+.features{
+    width:80%;
+    margin:auto;
+    left:0px;
+    right:0px;
+}
+
+.line_1{
+    margin-top:50px;
+    border-bottom: solid;
+    border-color: #4F4F4F;
+    border-width:7px;
+
+}
+
+.line_2{
+    margin-top:50px;
+    border-bottom: solid;
+    border-color: #4F4F4F;
+    border-width:7px;
+
+}
+
+.line_mid{
+    text-align: center;
+}

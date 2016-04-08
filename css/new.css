@@ -76,3 +76,81 @@
 .line_mid{
     text-align: center;
 }
+
+.vase{
+    background-image:url("../images/feature-1_03.png");
+    height:296px;
+    width:211px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+}
+
+.picture{
+    background-image:url("../images/feature-2_03.png");
+    height:222px;
+    width:223px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+
+}
+
+.cow{
+    background-image:url("../images/feature-3_07.png");
+    height:271px;
+    width:221px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+}
+
+.flower{
+    background-image: url("../images/feature-4_03.png");
+    height:226px;
+    width:226px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+}
+
+.describe_1{
+    text-align: center;
+    background-color: #FFFFFF;
+
+}
+
+.grayheart{
+    background-image: url("../images/grayheart.png");
+    height:29px;
+    width:42px;
+    border: 0;
+
+}
+
+.redheart{
+    background-image: url("../images/redheart.png");
+    height:34px;
+    width:37px;
+    border: 0;
+}
+
+p.smallword{
+    font-size: 5px;
+    margin-top: 5px;
+
+}
+
+.hengxian{
+    margin: auto;
+    left:0;
+    right: 0;
+    margin-top:0px;
+    border: 1px solid  #EEEEE0;
+    width: 10px;
+    height: 1px;
+}

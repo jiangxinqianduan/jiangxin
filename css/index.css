@@ -59,6 +59,7 @@
 
 .top-bar {
     text-align: right;
+<<<<<<< HEAD
 }
 
 .knife{
@@ -105,37 +106,6 @@
     margin:auto;
     left:0px;
     right:0px;
-}
-
-.bottle{
-    width:211px;
-    height:296px;
-
-
-}
-.features{
-    width:80%;
-    margin:auto;
-    left:0px;
-    right:0px;
-}
-
-.line_1{
-    margin-top:50px;
-    border-bottom: solid;
-    border-color: #4F4F4F;
-    border-width:7px;
-
-}
-
-.line_2{
-    margin-top:50px;
-    border-bottom: solid;
-    border-color: #4F4F4F;
-    border-width:7px;
-
-}
-
-.line_mid{
-    text-align: center;
+=======
+>>>>>>> origin/master
 }

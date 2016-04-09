@@ -1,0 +1,156 @@
+.knife{
+    background-image: url("../images/hot-1_03.png");
+    height:218px;
+    width:313px;
+    margin:auto;
+    left:0px;
+    right:0px;
+}
+
+.tea{
+    background-image: url("../images/hot-2_03.png");
+    height:218px;
+    width:313px;
+    margin:auto;
+    left:0px;
+    right:0px;
+
+}
+
+.sun{
+    background-image:url("../images/hot-3_03.png");
+    height:218px;
+    width:313px;
+    margin:auto;
+    left:0px;
+    right:0px;
+    
+
+}
+.littleblack{
+
+
+    width:80%;
+    margin:auto;
+        margin-top: 20px;
+    left:0px;
+    right:0px;
+}
+
+.smallblack{
+    width:80%;
+    margin:auto;
+    left:0px;
+    right:0px;
+}
+
+.bottle{
+    width:211px;
+    height:296px;
+
+
+}
+.features{
+    width:80%;
+    margin:auto;
+    left:0px;
+    right:0px;
+}
+
+.line_1{
+    margin-top:50px;
+    border-bottom: solid;
+    border-color: #4F4F4F;
+    border-width:7px;
+
+}
+
+.line_2{
+    margin-top:50px;
+    border-bottom: solid;
+    border-color: #4F4F4F;
+    border-width:7px;
+
+}
+
+.line_mid{
+    text-align: center;
+}
+
+.vase{
+    background-image:url("../images/feature-1_03.png");
+    height:296px;
+    width:211px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+}
+
+.picture{
+    background-image:url("../images/feature-2_03.png");
+    height:222px;
+    width:223px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+
+}
+
+.cow{
+    background-image:url("../images/feature-3_07.png");
+    height:271px;
+    width:221px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+}
+
+.flower{
+    background-image: url("../images/feature-4_03.png");
+    height:226px;
+    width:226px;
+    margin:auto;
+    margin-top: 30px;
+    left:0px;
+    right:0px;
+}
+
+.describe_1{
+    text-align: center;
+    background-color: #FFFFFF;
+
+}
+
+.grayheart{
+    background-image: url("../images/grayheart.png");
+    height:29px;
+    width:42px;
+    border: 0;
+
+}
+
+.redheart{
+    background-image: url("../images/redheart.png");
+    height:34px;
+    width:37px;
+    border: 0;
+}
+
+p.smallword{
+    font-size: 5px;
+    margin-top: 5px;
+
+}
+
+.hengxian{
+    margin: auto;
+    left:0;
+    right: 0;
+    margin-top:0px;
+    border: 1px solid  #EEEEE0;
+    width: 10px;
+    height: 1px;
+}

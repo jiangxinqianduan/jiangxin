@@ -1,0 +1,11 @@
+.information-block{
+	background-color:#332233;
+	vertical-align: center;
+}
+.information-block img{
+	height: 500px;
+}
+.information-block p{
+	background-color: transparent;
+
+}

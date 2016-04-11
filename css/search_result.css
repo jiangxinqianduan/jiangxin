@@ -68,6 +68,12 @@
     color: azure;
 }
 
+.btn-black{
+    font-size: 5px;
+    background-color: gray;
+    color: azure;
+}
+
 .result-list {
 
 }
@@ -77,7 +83,6 @@
 }
 
 .result-item {
-    background-image: url("../images/top-product_03.png");
     margin:auto;
     left:0;
     right:0;

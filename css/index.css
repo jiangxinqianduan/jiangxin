@@ -28,6 +28,7 @@
 .logo {
     height: 90px;
     width: 130px;
+    text-align: right;
 }
 
 .cart-logo {
@@ -46,7 +47,7 @@
 
 .searchBox {
     height: 23px;
-    width: 120px;
+    width: 110px;
     border: 1.5px solid #000;
     vertical-align: bottom;
     background-color: gainsboro;
@@ -59,53 +60,4 @@
 
 .top-bar {
     text-align: right;
-<<<<<<< HEAD
-}
-
-.knife{
-    background-image: url("../images/hot-1_03.png");
-    height:218px;
-    width:313px;
-    margin:auto;
-    left:0px;
-    right:0px;
-}
-
-.tea{
-    background-image: url("../images/hot-2_03.png");
-    height:218px;
-    width:313px;
-    margin:auto;
-    left:0px;
-    right:0px;
-
-}
-
-.sun{
-    background-image:url("../images/hot-3_03.png");
-    height:218px;
-    width:313px;
-    margin:auto;
-    left:0px;
-    right:0px;
-    
-
-}
-.littleblack{
-
-
-    width:80%;
-    margin:auto;
-        margin-top: 20px;
-    left:0px;
-    right:0px;
-}
-
-.smallblack{
-    width:80%;
-    margin:auto;
-    left:0px;
-    right:0px;
-=======
->>>>>>> origin/master
 }

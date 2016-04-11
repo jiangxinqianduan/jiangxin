@@ -1,0 +1,14 @@
+.information-block{
+	border-bottom:5px solid #223322;
+	height: 300px;
+}
+.information-block img{
+	height: 300px;
+}
+.information-text{
+	height:300px;
+	padding:100px 30px;
+}
+.ingenuity-background{
+	background-image: url(../images/bg.png);
+}

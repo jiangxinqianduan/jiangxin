@@ -93,3 +93,13 @@
     padding-top: 10px;
     letter-spacing: 5px;
 }
+.dash-line{
+    border-bottom: 4px dotted #000000;
+}
+.buttons-list{
+    text-align: center;
+}
+.item{
+    height:200px;
+    width: 200px;
+}

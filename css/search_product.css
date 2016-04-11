@@ -1,0 +1,98 @@
+.left-list{
+    border:1px solid white;
+    margin-top: 40px;
+    width: 200px;
+}
+
+.left-list-header{
+    border: 1px solid white;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+.left-list-body{
+    text-align: center;
+    color: #EEEEE0;
+    background-color:#000;
+    opacity:0.5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+.left-list-body li{
+    margin-top: 25px;
+}
+
+.left-list-body a{
+    color: orange;
+}
+
+.big-search{
+    text-align: center;
+    margin-top: 30%;
+}
+
+.big-search-box{
+    height: 50px;
+    width: 400px;
+    border: 1px solid white;
+    background-color: #000;
+    opacity: 0.5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    border-radius: 5px;
+}
+
+.search-btn{
+    height: 50px;
+    background-color: orange;
+    color: #FFFFFF;
+}
+
+.sections{
+    height: 200px;
+    border: 1px solid black;
+    padding-top: 5%;
+}
+
+.title-box{
+    height: 50px;
+    border: 1px solid black;
+    width: 200px;
+    margin: auto;
+    left:0;
+    right:0;
+    text-align: center;
+}
+
+.big-section{
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.big-section h2{
+    padding-top: 20%;
+}
+
+.recommend{
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 5%;
+    border:1px solid black;
+}
+
+.price{
+    color:red;
+}
+
+.comment{
+    color: cornflowerblue;
+}
+.small-product-img{
+
+}
+

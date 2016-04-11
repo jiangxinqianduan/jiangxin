@@ -1,11 +1,14 @@
 .information-block{
-	background-color:#332233;
-	vertical-align: center;
+	border-bottom:5px solid #223322;
+	height: 300px;
 }
 .information-block img{
-	height: 500px;
+	height: 300px;
 }
-.information-block p{
-	background-color: transparent;
-
+.information-text{
+	height:300px;
+	padding:100px 30px;
+}
+.ingenuity-background{
+	background-image: url(../images/bg.png);
 }

@@ -67,3 +67,24 @@
     background-color: black;
     color: azure;
 }
+
+.result-list {
+
+}
+
+.result-list li{
+    list-style-type: none;
+}
+
+.result-item {
+    background-image: url("../images/top-product_03.png");
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.result-item h1 {
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}

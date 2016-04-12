@@ -167,6 +167,7 @@ require('db.php');
         </div>
         <?php
     }
+    mysqli_close($con);
  ?>
         
 </div>

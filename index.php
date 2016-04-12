@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
     <meta charset="UTF-8">
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -13,6 +13,7 @@
     <?php
     require('isLogin.php');
     require_once('db.php');
+    $con=getConnect();
 
     ?>
     <div class="container">
@@ -120,80 +121,34 @@
             <div class="col-md-4 text-center line">
             </div>
         </div>
-
+<?php 
+$result=mysqli_query($con,"select g_pic,g_des,g_price,g_name from good limit 4");
+?>
         <div class = "row">
-            <div class="col-md-3 text-center">
+        <?php for($i=0;$i<4;$i++){
+            $row=mysqli_fetch_array($result);
+            ?><div class="col-md-3 text-center">
                 <article class="main-content">
                     <img src="images/feature-1_03.png" alt="feature1">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
+                            <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
                         </div>
                         <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
+                            <img src=<?php echo '"images/'.$row['g_pic'].'"';?> alt="heart" class="picture">
                         </div>
                     </div>
                     <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
+                        <h4><?php echo $row['g_des']; ?></h4>
                     </div>
                     <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
+                    <h2 class="price">￥<?php echo $row['g_price']; ?></h2>
                 </article>
             </div>  
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
+            
+            } ?>
+            
+            
         </div>
         
         <div class="row topic">

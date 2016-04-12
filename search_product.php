@@ -148,7 +148,7 @@
     </div>
 <?php 
 require('db.php');
-    $con=DBconnect::getConnect('ingenuity');
+    $con=DBconnect::getConnect();
     if( mysqli_connect_errno($con))echo '目前无法连接到数据库，请联系系统管理员。';
 ?>
 <div class="row recommend">  

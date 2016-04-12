@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset="UTF-8">
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -15,8 +16,7 @@
 
 <div id="debug">
 <?php
-    if(isset($_SESSION['username'])&&isset($_SESSION['isLogin'])) echo '已经登陆';
-    
+    require_once('isLogin.php');
 ?>
 </div>
 <div class="container">

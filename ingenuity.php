@@ -16,7 +16,9 @@
 	require('./db.php');
 	$con=dbConnect::getConnect();
 	$user=$_SESSION['username'];
+	if(!isset($_GET['cid']))header("Location:index.php");
 	$craftman=$_GET['cid'];
+
 	?>
 	<div class="row">
 		<div class="header">

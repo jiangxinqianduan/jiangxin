@@ -12,9 +12,9 @@
     <!-- Header -->
     <?php
     require('isLogin.php');
-    require_once('db.php');
-    $con=getConnect();
-
+    require('./db.php');
+    $con=dbConnect::getConnect();
+    $user=$_SESSION['username'];
     ?>
     <div class="container">
         <div class="row">
@@ -101,9 +101,9 @@
         <div class="container">
             <div class="row content-hot">
                 <div class="col-md-4 text-center">
-                   <img src="images/hot-1_03.png" alt="hot1">
-               </div>
-               <div class="col-md-4 text-center">
+                 <img src="images/hot-1_03.png" alt="hot1">
+             </div>
+             <div class="col-md-4 text-center">
                 <img src="images/hot-2_03.png" alt="hot2">
             </div>
             <div class="col-md-4 text-center">
@@ -121,21 +121,32 @@
             <div class="col-md-4 text-center line">
             </div>
         </div>
-<?php 
-$result=mysqli_query($con,"select g_pic,g_des,g_price,g_name from good limit 4");
-?>
+        <?php 
+        $result=mysqli_query($con,"select g_id,g_pic,g_des,g_price,g_name from good order by g_sell limit 4");
+        ?>
         <div class = "row">
-        <?php for($i=0;$i<4;$i++){
-            $row=mysqli_fetch_array($result);
-            ?><div class="col-md-3 text-center">
+            <?php for($i=0;$i<4;$i++){
+                $row=mysqli_fetch_array($result);
+                ?><div class="col-md-3 text-center">
                 <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
+                    <img src="<?php echo $row['g_pic']; ?>" alt="feature1">
                     <div class="row">
                         <div class="col-md-6 text-left">
                             <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
                         </div>
                         <div class="col-md-6 text-right">
-                            <img src=<?php echo '"images/'.$row['g_pic'].'"';?> alt="heart" class="picture">
+                            <img src=
+                            <?php 
+                            $res=mysqli_query($con,"select * from collection where u_name='$user' and g_id='".$row['g_id']."'");
+                            if(mysqli_num_rows($res)==0)
+                            {
+                                echo '"images/grayheart.png"';
+                            }
+                            else
+                            {
+                                echo '"images/redheart.png"';
+                            }
+                            ?> alt="heart" class="picture">
                         </div>
                     </div>
                     <div class="row text-left introduction">
@@ -145,195 +156,143 @@ $result=mysqli_query($con,"select g_pic,g_des,g_price,g_name from good limit 4")
                     <h2 class="price">￥<?php echo $row['g_price']; ?></h2>
                 </article>
             </div>  
-            
-            } ?>
-            
-            
-        </div>
-        
-        <div class="row topic">
-            <div class="col-md-4 text-center line">
-            </div>
-            <div class="col-md-4 text-center">
-                <h1>LATEST &nbsp ITEMS</h1>
-            </div>
-            <div class="col-md-4 text-center line">
-            </div>
-        </div>
+            <?php   
+        } 
+        ?>
 
-        <div class = "row">
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>  
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-            <div class="col-md-3 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-        </div>
 
-        <div class="row theme">
-            <article class="theme-content">
+    </div>
+
+    <div class="row topic">
+        <div class="col-md-4 text-center line">
+        </div>
+        <div class="col-md-4 text-center">
+            <h1>LATEST &nbsp ITEMS</h1>
+        </div>
+        <div class="col-md-4 text-center line">
+        </div>
+    </div>
+
+    <?php 
+    $result=mysqli_query($con,"select g_id,g_pic,g_des,g_price,g_name from good order by g_date limit 4");
+    ?>
+    <div class = "row">
+        <?php for($i=0;$i<4;$i++){
+            $row=mysqli_fetch_array($result);
+            ?><div class="col-md-3 text-center">
+            <article class="main-content">
+                <img src="<?php echo $row['g_pic']; ?>" alt="feature1">
                 <div class="row">
-                    <div class="col-md-8">
-                        <h3 class="theme-name">OXYGEN-ECOMMENT THEME</h3>
+                    <div class="col-md-6 text-left">
+                        <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
                     </div>
-                    <div class="col-md-4 text-right">
-                        <button type="button" class="btn btn-default theme-button">theme</button>
-                    </div> 
+                    <div class="col-md-6 text-right">
+                        <img src=
+                        <?php 
+                        $res=mysqli_query($con,"select * from collection where u_name='$user' and g_id='".$row['g_id']."'");
+                        if(mysqli_num_rows($res)==0)
+                        {
+                            echo '"images/grayheart.png"';
+                        }
+                        else
+                        {
+                            echo '"images/redheart.png"';
+                        }
+                        ?> alt="heart" class="picture">
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4 class="theme-introduction">laklsdalsflaskfal</h4>
-                    </div>
-                </div> 
+                <div class="row text-left introduction">
+                    <h4><?php echo $row['g_des']; ?></h4>
+                </div>
+                <hr align="center" width="80%">
+                <h2 class="price">￥<?php echo $row['g_price']; ?></h2>
             </article>
-        </div>
+        </div>  
+        <?php   
+    } 
+    ?>
+    </div>
+    <div class="row theme">
+        <article class="theme-content">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="theme-name">OXYGEN-ECOMMENT THEME</h3>
+                </div>
+                <div class="col-md-4 text-right">
+                    <button type="button" class="btn btn-default theme-button">theme</button>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="theme-introduction">laklsdalsflaskfal</h4>
+                </div>
+            </div> 
+        </article>
+    </div>
 
-        <div class="row accessories">
-            <div class="col-md-3 text-center">
-                <img src="images/hot-1_03.png" alt="accessories1">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/hot-1_03.png" alt="accessories1">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/hot-1_03.png" alt="accessories1">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/hot-1_03.png" alt="accessories1">
-            </div>
+    <div class="row accessories">
+        <div class="col-md-3 text-center">
+            <img src="images/hot-1_03.png" alt="accessories1">
         </div>
-
-        <div class="row topic">
-            <div class="col-md-4 text-center line">
-            </div>
-            <div class="col-md-4 text-center">
-                <h1>FEATURED &nbsp ITEMS</h1>
-            </div>
-            <div class="col-md-4 text-center line">
-            </div>
+        <div class="col-md-3 text-center">
+            <img src="images/hot-1_03.png" alt="accessories1">
         </div>
+        <div class="col-md-3 text-center">
+            <img src="images/hot-1_03.png" alt="accessories1">
+        </div>
+        <div class="col-md-3 text-center">
+            <img src="images/hot-1_03.png" alt="accessories1">
+        </div>
+    </div>
 
-        <div class = "row">
+    <div class="row topic">
+        <div class="col-md-4 text-center line">
+        </div>
+        <div class="col-md-4 text-center">
+            <h1>FEATURED &nbsp ITEMS</h1>
+        </div>
+        <div class="col-md-4 text-center line">
+        </div>
+    </div>
+    <?php 
+    $result=mysqli_query($con,"select g_id,g_pic,g_des,g_price,g_name from good limit 3");
+    ?>
+
+    <div class = "row">
+        <?php for($i=0;$i<3;$i++){
+            $row=mysqli_fetch_array($result);
+            ?>
             <div class="col-md-4 text-center">
                 <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
+                    <img src="<?php echo $row['g_pic']; ?>" alt="feature1">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
+                            <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
                         </div>
                         <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
+                            <img src=<?php 
+                            $res=mysqli_query($con,"select * from collection where u_name='$user' and g_id='".$row['g_id']."'");
+                            if(mysqli_num_rows($res)==0)
+                            {
+                                echo '"images/grayheart.png"';
+                            }
+                            else
+                            {
+                                echo '"images/redheart.png"';
+                            }
+                            ?> alt="heart" class="picture">
                         </div>
                     </div>
                     <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
+                        <h4><?php echo $row['g_des']; ?></h4>
                     </div>
                     <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-            <div class="col-md-4 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
-                </article>
-            </div>
-            <div class="col-md-4 text-center">
-                <article class="main-content">
-                    <img src="images/feature-1_03.png" alt="feature1">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#">牙舟陶</a></h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <img src="images/grayheart.png" alt="heart" class="picture">
-                        </div>
-                    </div>
-                    <div class="row text-left introduction">
-                        <h4>苗族饰物</h4>
-                    </div>
-                    <hr align="center" width="80%">
-                    <h2 class="price">$6.50</h2>
+                    <h2 class="price">￥<?php echo $row['g_price']; ?></h2>
                 </article>
             </div>  
+            <?php   
+        } 
+        ?>
         </div>
 
         <div class="row random-products">

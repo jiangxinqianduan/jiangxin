@@ -181,5 +181,6 @@ require('db.php');
         </div>
     </div>
     </div>
+    <?php require('bottom.html'); ?>
 </body>
     </html>

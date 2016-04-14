@@ -17,7 +17,7 @@
   <div style="position:absolute;left:0;top:0;width:100%;height:100%">
     <img src="images/back.png"width=100% height=100%>
   </div>
-
+  <div class="row">
   <div class="col-md-6">
   </div>
 
@@ -64,7 +64,7 @@
               $result=mysqli_query($con,"insert into user(u_name,u_pwd) values('$user','$password')");
               if(!$result)
               {
-                  echo '注册失败，用户名已被占用';
+                echo '注册失败，用户名已被占用';
               }
               else
               {
@@ -94,36 +94,13 @@
           <input type="submit" value="注册" style="margin-top:15px;margin-left: 75px">
 
         </form>
-      </div>
-
-
     </div>
-
-
   </div>
-
+  </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
+</div>
+<?php require('bottom.html');?>
 </body>
+</html>

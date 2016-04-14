@@ -123,7 +123,7 @@ while($row=mysqli_fetch_array($result))
 }
 	 ?>
 		
-		<div class="footer"></div>
+		<?php require('bottom.html'); ?>
 	</div>
 	</body>
 	</html>

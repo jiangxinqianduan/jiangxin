@@ -14,7 +14,10 @@
     require('isLogin.php');
     require('./db.php');
     $con=dbConnect::getConnect();
-    $user=$_SESSION['username'];
+    $user="default";
+    if(isset($_SESSION['username']))$user=$_SESSION['username'];
+    else
+
     ?>
     <div class="container">
         <div class="row">
@@ -347,63 +350,6 @@
 <!-- Content end-->
 
 <!-- Footer -->
-<div class="container-fluid">
-    <div class="footer-background">
-        <div class="container">
-            <div class="row footer-information">
-                <div class="col-md-4">
-                    <ul class="footer-contact">
-                        <li><h3>Contact us</h3></li>
-                        <li><h3>Viahbckajsdaj</h3></li>
-                        <li><h3>sdfsdfssdvsd</h3></li>
-                        <li><a href="#"><h3>dsvfsdvsdv</a></h3></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <ul class="footer-contact">
-                        <li><h3>Contact us</h3></li>
-                        <li><h3>Viahbckajsdaj</h3></li>
-                        <li><h3>sdfsdfssdvsd</h3></li>
-                        <li><a href="#"><h3>dsvfsdvsdv</a></h3></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <ul class="footer-contact">
-                        <li><h3>Contact us</h3></li>
-                        <li><h3>Viahbckajsdaj</h3></li>
-                        <li><h3>sdfsdfssdvsd</h3></li>
-                        <li><a href="#"><h3>dsvfsdvsdv</a></h3></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <ul class="footer-contact">
-                        <li><h3>Contact us</h3></li>
-                        <li><h3>Viahbckajsdaj</h3></li>
-                        <li><h3>sdfsdfssdvsd</h3></li>
-                        <li><a href="#"><h3>dsvfsdvsdv</a></h3></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <ul class="footer-contact">
-                        <li><h3>Contact us</h3></li>
-                        <li><h3>Viahbckajsdaj</h3></li>
-                        <li><h3>sdfsdfssdvsd</h3></li>
-                        <li><a href="#"><h3>dsvfsdvsdv</a></h3></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row other">
-                <div class="col-md-4">
-                    <h3>copyright</h3>
-                    <h3>madebyxb</h3>
-                </div>
-                <div class="col-md-4 col-xs-offset-4">
-                    <h3>follow us on</h3>
-                    <hr align="center">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php require('bottom.html'); ?>
 </body>
 </html>

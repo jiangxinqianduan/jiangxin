@@ -98,6 +98,9 @@
 .picture {
     margin-top:18px;
     margin-right:20px;
+    background-image: url("../images/greyheart.PNG");
+    width:32px;
+    height: 32px;
 }
 
 .introduction {

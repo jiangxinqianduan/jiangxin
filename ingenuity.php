@@ -55,7 +55,7 @@ while($row=mysqli_fetch_array($result))
 }
 	 ?>
 		
-		<?php require('bottom.php'); ?>
+		<?php require('bottom.html'); ?>
 	</div>
 	</body>
 	</html>

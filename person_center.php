@@ -74,6 +74,7 @@ if(isset($_GET['type']))
                         </tbody>
                     </table>
                 </div>
+                <?php mysqli_query($con,"select u_money from user where u_id=$user_id and u)name=") ?>
                 <div class="col-md-10 person-content">
                     <div class="row login">
                         <div class="col-md-4 text-center">

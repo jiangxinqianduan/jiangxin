@@ -1,15 +1,9 @@
 .background {
     background-image: url("../images/bg.png");
-    height: 2530px;
     width: 1162px;
     margin:auto;
     left:0;
     right:0;
-}
-
-.container {
-    width:90%;
-    margin-left: 5%;
 }
 
 .top-products {
@@ -63,15 +57,19 @@
 }
 
 .btn-black{
-    font-size: 5px;
+    font-size: 20px;
     background-color: black;
     color: azure;
+    width:150px;
+    margin-left: 20px;
 }
 
-.btn-black{
-    font-size: 5px;
+.btn-grey{
+    font-size: 20px;
     background-color: gray;
     color: azure;
+    width:150px;
+    margin-left:20px;
 }
 
 .result-list {
@@ -102,4 +100,25 @@
 .item{
     height:200px;
     width: 200px;
+}
+
+.btn-row{
+    margin-top: 70px;
+
+}
+
+.nav-bar{
+    margin: 0 auto;
+    left:0;
+    right:0;
+    text-align: center;
+    background-color: #444444;
+}
+
+.nav-bar li{
+    display: inline;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 20%;
 }

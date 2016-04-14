@@ -274,6 +274,6 @@
 <!-- Content end-->
 
 <!-- Footer -->
-<?php require('bottom.php'); ?>
+<?php require('bottom.html'); ?>
 </body>
 </html>

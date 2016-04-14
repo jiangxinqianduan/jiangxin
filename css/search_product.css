@@ -53,14 +53,14 @@
 }
 
 .sections{
-    height: 200px;
+    height: 300px;
     border: 1px solid black;
     padding-top: 5%;
 }
 
 .title-box{
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid white;
     width: 200px;
     margin: auto;
     left:0;
@@ -68,13 +68,19 @@
     text-align: center;
 }
 
+.title-box h2{
+    color: white;
+    margin-top: 5px;
+}
+
 .big-section{
-    height: 300px;
+    height: 500px;
     border: 1px solid black;
     text-align: center;
 }
 
 .big-section h2{
+    color: white;
     padding-top: 20%;
 }
 
@@ -82,10 +88,18 @@
     width: 90%;
     margin-top: 40px;
     margin-left: 5%;
-    border:1px solid black;
+    margin-bottom: 40px;
+}
+
+.recommend-item{
+    border:1px solid #CCCCCC;
+    text-align: center;
+    width: 20%;
+    margin-left: 5%;
 }
 
 .price{
+    text-align: center;
     color:red;
 }
 
@@ -93,6 +107,7 @@
     color: cornflowerblue;
 }
 .small-product-img{
-
+    width: 90%;
+    height: 300px;
 }
 

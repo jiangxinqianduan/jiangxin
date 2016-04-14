@@ -44,6 +44,8 @@
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     border-radius: 5px;
+    color: white;
+    font-size: 15px;
 }
 
 .search-btn{

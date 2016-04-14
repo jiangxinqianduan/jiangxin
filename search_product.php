@@ -108,6 +108,6 @@ require('db.php');
         </div>
     </div>
     </div>
-    <?php require('bottom.html'); ?>
+    <?php require('bottom.php'); ?>
 </body>
     </html>

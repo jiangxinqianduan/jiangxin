@@ -48,15 +48,16 @@
             if( mysqli_connect_errno($con))echo '目前无法连接到数据库，请联系系统管理员。';
             if($lgORre=='login')
             {   
-              $result=mysqli_query($con,"select u_name from user where u_name='$user' and u_pwd='$password'");
+              $result=mysqli_query($con,"select u_id,u_name from user where u_name='$user' and u_pwd='$password'");
               if(!$result||mysqli_num_rows($result)==0)echo "用户名或密码错误";
               else
               {
                 echo '登陆成功';
                 header('Location:index.php');
-                
+                $row=mysqli_fetch_array($result);
                 $_SESSION['username']=$user;
                 $_SESSION['isLogin']=true;
+                $_SESSION['uid']=$row['u_id'];
               }
             }
             if($lgORre=='register')

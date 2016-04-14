@@ -12,9 +12,8 @@
 <body>
     <!-- Header -->
 <?php 
-if(!(isset($_SESSION['username'])&&isset($_SESSION['uid'])&&isset($_SESSION['isLogin'])))header("Location:login.php");
 require("header.php");
-
+if(!(isset($_SESSION['username'])&&isset($_SESSION['uid'])&&isset($_SESSION['isLogin'])))header("Location:login.php");
 ?>
     <div class="container-fluid">
         <div class="person_center_background">
@@ -45,11 +44,6 @@ require("header.php");
                         </tr>
                         <tr>
                             <td>
-                                <a href="">购买过的店铺</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 <a href="">我的收藏</a>
                             </td>
                         </tr>
@@ -65,27 +59,12 @@ require("header.php");
                         </tr>
                         <tr>
                             <td>
-                                <a href="">我的留言</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 <a href="">我的评论</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="">收获地址</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="">我的好友</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="">我的红包</a>
+                                <a href="">收货地址</a>
                             </td>
                         </tr>
                     </tbody>

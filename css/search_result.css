@@ -33,20 +33,17 @@
     border: 1px solid #000000;
 }
 
-.dis {
-    margin-top: 10px;
-}
-
 .dis p{
-    margin-top: -5px;
-    text-align: center;
-    font-size: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .price {
     text-align: center;
     font-size: 5px;
     color: brown;
+    margin-top: 40px;
 }
 
 .top-product-footer {
@@ -103,7 +100,7 @@
 }
 
 .btn-row{
-    margin-top: 70px;
+    margin-top: 30px;
 
 }
 

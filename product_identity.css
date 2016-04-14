@@ -1,0 +1,121 @@
+.background {
+    background-image: url("../images/bg.png");
+    width: 1162px;
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.top-products {
+    margin-top: 141px;
+}
+
+.hot-small {
+    background-image: url("../images/top-product_03.png");
+    height: 220px;
+    width: 300px;
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.hot-small h4 {
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+
+.line {
+    margin:auto;
+    left:0;
+    right:0;
+    width:30px;
+    border: 1px solid #000000;
+}
+
+.dis p{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.price {
+    text-align: center;
+    font-size: 5px;
+    color: brown;
+    margin-top: 40px;
+}
+
+.top-product-footer {
+}
+
+.top-product-footer div{
+    text-align: center;
+}
+
+.btn-red{
+    font-size: 20px;
+    background-color: red;
+    color: azure;
+    width:150px;
+    margin-left: 20px;
+}
+
+.btn-orange{
+    font-size: 20px;
+    background-color: orange;
+    color: azure;
+    width:150px;
+    margin-left:20px;
+}
+
+.result-list {
+
+}
+
+.result-list li{
+    list-style-type: none;
+}
+
+.result-item {
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.result-item h1 {
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+.dash-line{
+    border-bottom: 4px dotted #000000;
+}
+.buttons-list{
+    text-align: center;
+}
+.item{
+    height:200px;
+    width: 200px;
+}
+
+.btn-row{
+    margin-top: 30px;
+
+}
+
+.nav-bar{
+    margin: 0 auto;
+    left:0;
+    right:0;
+    text-align: center;
+    background-color: #444444;
+}
+
+.nav-bar li{
+    display: inline;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 20%;
+}

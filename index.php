@@ -12,12 +12,6 @@
     <!-- Header -->
     
     <?php require("header.php");?>
-    <div class="col-md-3 search">
-        <form>
-            <input type="text" name="search" class="searchBox" title=""/>
-            <input type="image" src="images/search_03.png" class="searchIcon"/>
-        </form>
-    </div>
 <div class="container-fluid">
     <div class="row text-center">
         <div class="header-background">

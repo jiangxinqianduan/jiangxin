@@ -1,0 +1,148 @@
+.person_center_background {
+	background-image:url(../images/bg.png);
+	background-position: center;
+	margin:auto;
+}
+
+.content-structure {
+	margin-top: 50px;
+}
+
+.person-menu {
+    margin-top: 40px;
+    width: 200px;
+}
+
+.menu-list {
+	border-color: #000000;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.menu-list thead tr td {
+	border-color: #000000;
+	border-style: solid;
+	border-width: 2px;
+	background-color: orange;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.menu-list tbody tr td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.person-content {
+
+}
+
+.login {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+
+.collect-header {
+
+}
+
+.collect-content {
+	border-width: 2px;
+	border-color: #000000;
+	border-style: solid;
+}
+
+.collect-menu {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.collect-menu li {
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.attribute {
+	margin-top: 30px;
+	background-color: #888888
+}
+
+.collect-item {
+	margin-top: 30px;
+	border-style: solid;
+	border-color: #888888;
+	border-width: 2px;
+}
+
+.collect-item-header {
+	vertical-align: middle;
+	background-color: #ffffff;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.collect-item-content {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.page {
+	margin-top: 30px;
+}
+
+.page-item {
+	list-style: none;
+}
+
+.page-item li {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #ffffff;
+	margin-right: -6px;
+}
+
+.proposal-header {
+	margin-top: 30px;
+}
+
+.proposal-content {
+
+}
+
+.proposal-main-content {
+	border-color: #ffffff;
+	border-width: 2px;
+	border-style: solid;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.proposal-name {
+	text-align: left;
+	margin-left: 20px;
+}
+
+.proposal-price {
+	text-align: left;
+	margin-left: 20px;
+}
+
+.proposal-people {
+	text-align: left;
+	margin-left: 20px;
+}
+
+.small-page {
+	padding-top: -10px;
+	padding-bottom: -10px;
+}
+
+.point {
+	cursor: pointer;
+	font-size: 100px;
+}

@@ -59,7 +59,7 @@
 <div class="row" style="background-image: url('images/bg.png'); background-size: cover;text-align: center">
     <div class="row">
         <div class="col-md-5 title-line"></div>
-        <div class="col-md-2"><h1>Search Result</h1></div>
+        <div class="col-md-2"><h1>查询结果</h1></div>
         <div class="col-md-5 title-line"></div>
     </div>
     <?php 
@@ -84,14 +84,14 @@
         ?>
         <li>
             <div class="product">
-                <h3><?php echo $row['g_name']; ?></h3>
+                <h3 class="product-name"><?php echo $row['g_name']; ?></h3>
                 <div class="row top-product-footer">
                     <div class="col-md-6">
                         <img src="<?php echo $row['g_pic']; ?>" class="product-img"/>
                     </div>
                     <div class="col-md-6 btn-row dis">
-                        <a class="btn btn-black" href="product_identity.php?g_id=<?php echo $row['g_id'];?>">查看详情</a>
-                        <a class="btn btn-grey" href=".addToCart.php?g_id=<?php echo $row['g_id'];?>">加入购物车</a>
+                        <a class="btn btn-red" href="product_identity.php?g_id=<?php echo $row['g_id'];?>">查看详情</a>
+                        <a class="btn btn-orange" href=".addToCart.php?g_id=<?php echo $row['g_id'];?>">加入购物车</a>
                         <p><?php echo $row['g_des']; ?></p>
                         <p><?php echo $row['g_note']; ?></p>
                         <p class="price">￥<?php echo $row['g_price'];?></p>

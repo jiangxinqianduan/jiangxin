@@ -121,24 +121,24 @@
     text-align: center;
 }
 
-.btn-black{
+.btn-red{
     font-size: 20px;
-    background-color: black;
+    background-color: red;
     color: azure;
     width:150px;
     margin-left: 20px;
 }
 
-.btn-grey {
+.btn-orange {
     font-size: 20px;
-    background-color: gray;
+    background-color: orange;
     color: azure;
     width: 150px;
     margin-left: 20px;
 }
 
 .btn-row{
-    margin-top: 30px;
+    margin-top: 50px;
 
 }
 
@@ -185,4 +185,9 @@
 .title-line{
     border-bottom: 4px solid #000000;
     margin-top: 40px;
+}
+
+.product-name {
+    margin-top: 50px;
+    font-size: 30px;
 }

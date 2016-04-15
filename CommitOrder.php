@@ -12,14 +12,14 @@
     <title>匠心传承</title>
 </head>
 <body>
-<script src="js/CommitOrder.js"></script>
+
     <!-- Header -->
     
     <?php 
     require("header.php");
 $g_id=$_GET['g_id'];
     ?>
-
+    <script src="js/CommitOrder.js"></script>
     <!-- Header End-->
 
     <!-- Content -->

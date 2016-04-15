@@ -1,4 +1,3 @@
-<?php ini_set('session.auto_start',1); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +10,7 @@
     <title>匠心传承</title>
 </head>
 <body>
-    <!-- Header -->
-    
-    <?php require("header.php");?>
+<?php require("header.php");?>
 <div class="container-fluid">
     <div class="row text-center">
         <div class="header-background">

@@ -58,7 +58,7 @@
                     <img src="<?php echo $row['g_pic']; ?>" alt="feature1">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
+                            <h3 class="name"><a href="product_identity.php?g_id=<?php echo $row['g_id'];?>"><?php echo $row['g_name'];?></a></h3>
                         </div>
                         <div class="col-md-6 text-right">
                             <img src=
@@ -110,7 +110,7 @@
                 <img src="<?php echo $row['g_pic']; ?>" alt="feature1">
                 <div class="row">
                     <div class="col-md-6 text-left">
-                        <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
+                        <h3 class="name"><a href="product_identity.php?g_id=<?php echo $row['g_id'];?>"><?php echo $row['g_name'];?></a></h3>
                     </div>
                     <div class="col-md-6 text-right">
                         <img src=
@@ -118,7 +118,7 @@
                         $res=mysqli_query($con,"select * from collection where u_name='$user' and g_id='".$row['g_id']."'");
                         if(mysqli_num_rows($res)==0)
                         {
-                            echo '"images/greyheart.png"';
+                            echo '"images/greyheart.PNG"';
                         }
                         else
                         {
@@ -193,14 +193,14 @@
                     <img src="<?php echo $row['g_pic']; ?>" alt="feature1">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <h3 class="name"><a href="#"><?php echo $row['g_name'];?></a></h3>
+                            <h3 class="name"><a href="product_identity.php?g_id=<?php echo $row['g_id'];?>"><?php echo $row['g_name'];?></a></h3>
                         </div>
                         <div class="col-md-6 text-right">
                             <img src=<?php 
                             $res=mysqli_query($con,"select * from collection where u_name='$user' and g_id='".$row['g_id']."'");
                             if(mysqli_num_rows($res)==0)
                             {
-                                echo '"images/greyheart.png"';
+                                echo '"images/greyheart.PNG"';
                             }
                             else
                             {
@@ -226,44 +226,44 @@
                 <ul class="group">
                     <li><h3>寸彦同</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">磨砂一体壶</a></li>
+                    <li><a href="product_identity.php?g_id=0">磨砂一体壶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">锤痕一体壶</a></li>
+                    <li><a href="product_identity.php?g_id=0">锤痕一体壶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">仿古一体壶</a></li>
+                    <li><a href="product_identity.php?g_id=0">仿古一体壶</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="group">
                     <li><h3>张彩敬</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">烟壶小晶</a></li>
+                    <li><a href="product_identity.php?g_id=0">烟壶小晶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">内画茶壶</a></li>
+                    <li><a href="product_identity.php?g_id=0">内画茶壶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">内画鼻烟壶</a></li>
+                    <li><a href="product_identity.php?g_id=0">内画鼻烟壶</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="group">
                     <li><h3>刘永周</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">藏族皮影</a></li>
+                    <li><a href="product_identity.php?g_id=0">藏族皮影</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">傣族皮影</a></li>
+                    <li><a href="product_identity.php?g_id=0">傣族皮影</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">哈尼族皮影</a></li>
+                    <li><a href="product_identity.php?g_id=0">哈尼族皮影</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="group">
                     <li><h3>马基淞</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">木雕香炉</a></li>
+                    <li><a href="product_identity.php?g_id=0">木雕香炉</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">葫芦茶盘</a></li>
+                    <li><a href="product_identity.php?g_id=0">葫芦茶盘</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">藤编花器</a></li>
+                    <li><a href="product_identity.php?g_id=0">藤编花器</a></li>
                 </ul>
             </div>
         </div>

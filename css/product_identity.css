@@ -6,8 +6,11 @@
     right:0;
 }
 .information{
-    margin-top:80px
+    margin-top:70px;
+    margin-bottom: 70px;
+
 }
+
 .information img{
     height: 350px;
     width: 100%;
@@ -131,8 +134,8 @@
 
 .passage-content {
     font-family: 微软雅黑;
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
-    line-height: 100%;
+    line-height: 200%;
     letter-spacing: 1px;
 }

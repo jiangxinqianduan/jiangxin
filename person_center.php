@@ -300,7 +300,7 @@
                                         <div class="col-md-3 text-center">
                                             <article class="proposal-main-content">
                                                 <img src="<?php echo $row['g_pic'];?>" alt="feature1">
-                                                <a href=""><h4 class="proposal-name"><?php echo $row['g_name'];?></h4></a>    
+                                                <a href="product_identity.php?g_id=0"><h4 class="proposal-name"><?php echo $row['g_name'];?></h4></a>    
                                                 <br>       
                                                 <h4 class="proposal-price">￥<?php echo $row['g_price'];?></h4>
                                                 <a href=""><h4 class="proposal-people">(已有<?php echo $row['g_sell']; ?>人购买）</h4></a>

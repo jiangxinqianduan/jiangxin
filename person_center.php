@@ -189,7 +189,7 @@
                                             <p><?php echo $row['g_price'];?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
-                                            <button type="button" class="btn btn-primary">购买</button>
+                                            <a href="CommitOrder.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-primary">购买</button></a>
                                             <h4><a href=".rmFromCart.php?g_id=<?php echo $row['g_id'];?>">移出购物车</a></h4>
                                         </div>
                                     </div>

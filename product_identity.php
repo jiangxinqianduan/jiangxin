@@ -39,7 +39,7 @@ $row=mysqli_fetch_array($result);
                     <p><?php echo $row['g_note'];?></p>
                     <p class="price">￥<?php echo $row['g_price'];?></p>
                     <a class="btn btn-red" href=".addToCart.php?g_id=<?php echo $g_id;?>">加入购物车</a>
-                    <a class="btn btn-orange">购买</a>
+                    <a href="CommitOrder.php?g_id=<?php echo $g_id; ?>" class="btn btn-orange">购买</a>
                 </div>
             </div>
         </div>

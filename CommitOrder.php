@@ -12,6 +12,7 @@
     <title>匠心传承</title>
 </head>
 <body>
+<script src="js/CommitOrder.js"></script>
     <!-- Header -->
     
     <?php 
@@ -140,6 +141,6 @@ $g_id=$_GET['g_id'];
         </div>
     </div>
     <?php require('bottom.php');?>
-    <script src="js/CommitOrder.js"></script>
+    
 </body>
 </html>

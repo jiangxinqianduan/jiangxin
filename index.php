@@ -1,3 +1,4 @@
+<?php ini_set('session.auto_start',1); ?>
 <!DOCTYPE html>
 <html>
 <head>

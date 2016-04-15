@@ -74,7 +74,7 @@
                             <img src="<?php echo $row['i_img']; ?>">
                         </div>
                         <div class="col-md-6">
-                        <p><?php echo nl2br($row['i_text']); ?></p>
+                        <p class="passage-content"><?php echo nl2br($row['i_text']); ?></p>
                         </div>
                     </div>
                     <?php
@@ -87,10 +87,10 @@
                     ?>
                     <div class="row text-center">
                         <div class="col-md-6">
-                            <img src="<?php echo $row['j_img']; ?>">
+                            <img src="<?php echo $row['j_pic']; ?>">
                         </div>
                         <div class="col-md-6">
-                        <p><?php echo nl2br($row['j_text']); ?></p>
+                        <p class="passage-content"><?php echo nl2br($row['j_text']); ?></p>
                         </div>
                     </div>
                     <?php
@@ -103,10 +103,10 @@
                     ?>
                     <div class="row text-center">
                         <div class="col-md-6">
-                            <img src="<?php echo $row['s_img']; ?>">
+                            <img src="<?php echo $row['s_pic']; ?>">
                         </div>
                         <div class="col-md-6">
-                        <p><?php echo nl2br($row['s_text']); ?></p>
+                        <p class="passage-content"><?php echo nl2br($row['s_text']); ?></p>
                         </div>
                     </div>
                     <?php
@@ -122,7 +122,7 @@
                             <img src="<?php echo $row['p_img']; ?>">
                         </div>
                         <div class="col-md-6">
-                            <p><?php echo nl2br($row['p_text']); ?></p>
+                            <p class="passage-content"><?php echo nl2br($row['p_text']); ?></p>
                         </div>
                     </div>
                     <?php

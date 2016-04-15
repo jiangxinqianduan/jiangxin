@@ -5,9 +5,10 @@
     left:0;
     right:0;
 }
+
 .information{
-    margin-top:70px;
-    margin-bottom: 70px;
+    margin-top:30px;
+
 
 }
 
@@ -136,6 +137,6 @@
     font-family: 微软雅黑;
     font-size: 20px;
     text-align: justify;
-    line-height: 200%;
+    line-height: 150%;
     letter-spacing: 1px;
 }

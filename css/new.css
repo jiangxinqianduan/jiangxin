@@ -6,7 +6,13 @@
     left:0px;
     right:0px;
 }
-
+.login-back{
+    height:100%;
+    width:100%;
+    background-image:url("../images/back.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
 .tea{
     background-image: url("../images/hot-2_03.png");
     height:218px;

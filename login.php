@@ -30,8 +30,8 @@
 
         <ul id="myTab" class="nav nav-tabs">
          <li class="active">
-           <a href="#login" data-toggle="tab">登录</a> </li>
-           <li><a href="#register" data-toggle="tab">注册</a></li>
+           <a href="#login" data-toggle="tab"><h5 style="font-family: initial;">登录</h5></a> </li>
+           <li><a href="#register" data-toggle="tab"><h5>注册</h5></a></li>
 
          </ul>
          <div id="myTabContent" class="tab-content">
@@ -53,11 +53,10 @@
               else
               {
                 echo '登陆成功';
-                
+                header('Location:index.php');
                 
                 $_SESSION['username']=$user;
                 $_SESSION['isLogin']=true;
-                header('Location:'.$_SERVER['HTTP_REFERER']);
               }
             }
             if($lgORre=='register')
@@ -77,12 +76,16 @@
           }
           ?>
           <div class="tab-pane fade in active" id="login">
-           <form method="post" action="login.php">
-            <input type="text" name="username"style="margin-top:50px;margin-left:75px">
-            <input type="password" name="password" style="margin-top:15px;margin-left:75px">
+           <form method="post" action="login.php" class="bs-example bs-example-form" role="form">
+           <div class="input-group">
+            <input type="text" placeholder="用户名/手机号/邮箱" name="username" style="margin-top:50px;margin-left:75px;color: #000000">
+            </div>
+            <div class="input-group">
+            <input type="password" placeholder="密码" name="password" style="margin-top:15px;margin-left:75px;color:#000000">
             <input type="hidden" name="lgORre" value="login"></input>
+            </div>
             <br>
-            <input type="submit" value="登录" style="margin-top:15px;margin-left: 75px">
+            <button type="button" class="btn btn-success" style="margin-top:0px;margin-left: 75px;width: 80px;">登陆</button>
           </form>
 
         </div>
@@ -102,6 +105,6 @@
 </div>
 </div>
 </div>
-<?php require('bottom.html');?>
+<?php require('bottom.php');?>
 </body>
 </html>

@@ -16,7 +16,7 @@ cal();
 function cal() {
     var singlePrice = parseFloat($('.price').text());
     var num = $('input[name="num"]').val();
-    ($('.price-sum').text(num * singlePrice));
+    $('.price-sum').text(num * singlePrice);
     var sum = num * singlePrice;
     var transFee = parseFloat($('.trans').text());
 

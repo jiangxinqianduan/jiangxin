@@ -4,9 +4,8 @@
     $con=dbConnect::getConnect();
     $user="default";
     $gid=$_GET['g_id'];
-    echo ;
     if(!(isset($_SESSION['username'])))header("Location:login.php");
     $user=$_SESSION['username'];
     mysqli_query($con,"insert into cart(u_name,g_id,cart_time) VALUES ('".$user."',".$gid.",'".date("Y-m-d")."')");
-    // header("Location:product_identity.php?g_id=".$g_id);
+    header("Location:product_identity.php?purchased=yes&g_id=".$gid);
 ?>

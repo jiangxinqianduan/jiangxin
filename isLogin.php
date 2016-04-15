@@ -1,9 +1,10 @@
 <?php 
 session_start();
 $user="default";
+$isLogin=false;
 if(isset($_SESSION['username'])&&isset($_SESSION['isLogin']))
 { 
-	echo '已经登陆';
+	$isLogin=true;
 	$user=$_SESSION['username'];
 }
 ?>

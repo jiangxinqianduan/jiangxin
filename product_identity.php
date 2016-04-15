@@ -14,9 +14,14 @@
 <?php 
 require("header.php");
 $g_id;
+$purchase="no";
 if(isset($_GET['g_id']))
 {
     $g_id=$_GET['g_id'];
+}
+if(isset($_GET['purchase']))
+{
+    $purchase=$_GET['purchase'];
 }
 $result=mysqli_query($con,"select * from good where g_id=".$g_id);
 $row=mysqli_fetch_array($result);

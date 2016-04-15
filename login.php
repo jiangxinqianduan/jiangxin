@@ -53,10 +53,11 @@
               else
               {
                 echo '登陆成功';
-                header('Location:index.php');
+                
                 
                 $_SESSION['username']=$user;
                 $_SESSION['isLogin']=true;
+                header('Location:'.$_SERVER['HTTP_REFERER']);
               }
             }
             if($lgORre=='register')

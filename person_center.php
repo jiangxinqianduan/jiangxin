@@ -15,7 +15,7 @@
     <?php 
     require("header.php");
     
-    if(!(isset($_SESSION['username'])&&isset($_SESSION['isLogin'])))
+    if(!$isLogin)
         header("Location:login.php");
     $result=mysqli_query($con,"select u_id,u_money from user where u_name='".$user."'");
     $row=mysqli_fetch_array($result);
@@ -59,11 +59,11 @@
                                     <a href="person_center.php?type=collect">我的收藏</a>
                                 </td>
                             </tr>
-<!--                             <tr <?php if($type=="order") echo 'class="active"'; ?>>
+                            <tr <?php if($type=="order") echo 'class="active"'; ?>>
                                 <td>
                                     <a href="person_center.php?type=order">我的订单</a>
                                 </td>
-                            </tr> -->
+                            </tr>
                             
                             
                             <tr <?php if($type=="evaluate") echo 'class="active"'; ?>>
@@ -140,35 +140,27 @@
                     <?php 
                     if($type=="collect")
                     {
-                        $result=mysqli_query($con,"select g_id,g_pic,p_price,g_name,c_time from good join collection using(g_id) where u_name='".$user."';");
+                        $result=mysqli_query($con,"select * from good natural join collection where u_name='".$user."';");
                         if($result)
                             while($row=mysqli_fetch_array($result))
                             {
                                 ?>
                                 <div class="row collect-item">
-                                    <div class="row collect-item-header">
-                                        <div class="col-md-2 text-center">
-                                            <input type="checkbox"></input>
-                                            <label>取消收藏</label>
-                                        </div>
-                                        <div class="col-md-6 text-left">
-                                            <label>收藏时间：<?php echo $row['c_time']; ?></label>
-                                        </div>
-                                    </div>
                                     <div class="row collect-item-content">
                                         <div class="col-md-2 text-center">
                                             <img src="<?php echo $row['g_pic'];?>">
                                         </div>
                                         <div class="col-md-6 text-left">
-                                            <label><?php $row['g_name'];?></label>
-                                            <label>商品货号：<?php $row['g_id'];?></label>
+                                            <label><?php echo $row['g_name'];?></label>
+                                            <label>商品货号：<?php echo $row['g_id'];?></label>
+                                            <p>收藏时间：<?php echo $row['c_time'];?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
                                             <p><?php echo $row['g_price'];?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
-                                            <button type="button" class="btn btn-primary">加入购物车</button>
-                                            <h4>取消收藏</h4>
+                                            <a href=".addToCart.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-primary">加入购物车</button></a>
+                                            <h4><a href=".rmFromCollect.php?g_id=<?php echo $row['g_id'];?>">取消收藏</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -176,35 +168,29 @@
                             }
                         }
                         elseif ($type=="cart") {
-                            $result=mysqli_query($con,"select g_id,g_pic,p_price,g_name,c_time from good join cart using(g_id) where u_name='".$user."';");
+                            $result=mysqli_query($con,"select * from good natural join cart  where u_name='".$user."';");
                             if($result)
                             while($row=mysqli_fetch_array($result))
                             {
                                 ?>
                                 <div class="row collect-item">
                                     <div class="row collect-item-header">
-                                        <div class="col-md-2 text-center">
-                                            <input type="checkbox"></input>
-                                            <label>移出购物车</label>
-                                        </div>
-                                        <div class="col-md-6 text-left">
-                                            <label>加入购物车时间：<?php echo $row['cart_time']; ?></label>
-                                        </div>
                                     </div>
                                     <div class="row collect-item-content">
                                         <div class="col-md-2 text-center">
                                             <img src="<?php echo $row['g_pic'];?>">
                                         </div>
                                         <div class="col-md-6 text-left">
-                                            <label><?php $row['g_name'];?></label>
-                                            <label>商品货号：<?php $row['g_id'];?></label>
+                                            <p>商品名称：<?php echo $row['g_name'];?></p>
+                                            <p>商品货号：<?php echo $row['g_id'];?></p>
+                                            <p>收藏时间：<?php echo $row['cart_time'];?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
                                             <p><?php echo $row['g_price'];?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
                                             <button type="button" class="btn btn-primary">购买</button>
-                                            <h4>移出购物车</h4>
+                                            <h4><a href=".rmFromCart.php?g_id=<?php echo $row['g_id'];?>">移出购物车</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +199,7 @@
                         }
                         elseif($type="order")
                         {
-                            $result=mysqli_query($con,"select o_id,g_id,g_pic,p_price,g_name,o_time from good join good_order using(g_id) where u_name='".$user."';");
+                            $result=mysqli_query($con,"select * from good natural join good_order where u_name='".$user."';");
                             if($result)
                             while($row=mysqli_fetch_array($result))
                             {
@@ -221,10 +207,10 @@
                                 <div class="row collect-item">
                                     <div class="row collect-item-header">
                                         <div class="col-md-2 text-center">
-                                            <label>订单编号：</label><span><?php echo $row['o_id'];?></span>
+                                            
                                         </div>
                                         <div class="col-md-6 text-left">
-                                            <label>下单时间：<?php echo $row['o_time']; ?></label>
+                                            <label></label>
                                         </div>
                                     </div>
                                     <div class="row collect-item-content">
@@ -233,14 +219,16 @@
                                         </div>
                                         <div class="col-md-6 text-left">
                                             <label><?php $row['g_name'];?></label>
-                                            <label>商品货号：<?php $row['g_id'];?></label>
+                                            <p>订单编号：<?php echo $row['o_id'];?></p>
+                                            <p>商品货号：<?php echo $row['g_id'];?></p>
+                                            <p>下单时间：<?php echo $row['o_time']; ?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
                                             <p><?php echo $row['g_price'];?></p>
                                         </div>
                                         <div class="col-md-2 text-center">
-                                            <button type="button" class="btn btn-primary">查看商品</button>
-                                            <h4>取消商品</h4>
+                                            <button type="button" class="btn btn-primary">查看订单</button>
+                                            <h4>取消订单</h4>
                                         </div>
                                     </div>
                                 </div>

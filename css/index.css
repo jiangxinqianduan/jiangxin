@@ -1,7 +1,11 @@
+body {
+    font-family: 微软雅黑;
+}
+
 .header logo {
     height: 90px;
     width: 130px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .top-bar {
@@ -80,15 +84,17 @@
 }
 
 .line {
-   border-bottom-color: #222222;
+   border-bottom-color: #6c6c6c;
    border-bottom-style: solid;
    height: 38px;
 }
 
 .main-content {
-    background-color:#444444;
+    background-color: #ffffff;
     margin-left:5px;
     margin-right:5px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 .name {
@@ -98,9 +104,6 @@
 .picture {
     margin-top:18px;
     margin-right:20px;
-    background-image: url("../images/greyheart.PNG");
-    width:32px;
-    height: 32px;
 }
 
 .introduction {
@@ -113,6 +116,7 @@
     text-align:left;
     margin-left:30px;
     padding-bottom:20px;
+    color: red;
 }
 
 .theme {
@@ -136,6 +140,8 @@
     vertical-align:middle;
     margin-right:50px;
     margin-top:30px;
+    background-color: black;
+    color: #ffffff;
 }
 
 .theme-introduction {
@@ -154,21 +160,23 @@
 .group {
     margin-left:5px;
     margin-right:5px;
-    background-color:#CCC;
+    background-color:#ffffff;
     list-style:none;
 }
 
 .group li {
     padding-top:10px;
     padding-bottom:20px;
+    font-size: 20px;
 }
 
 .footer-background {
-    background-color:#CCC;
+    background-color:#e0e0e0;
 }
 
 .footer-information {
-    margin-top:30px;
+    margin-top:-10px;
+
 }
     
 .footer-contact {
@@ -177,8 +185,29 @@
 }
 
 .footer-contact li {
+    color: #6c6c6c;
 }
 
 .other {
     padding-top:40px;
 }
+
+.little-header {
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.little-header1 {
+    font-weight: bold;
+}
+
+.copyright {
+    color: #6c6c6c;
+    margin-left: 40px;
+}
+
+
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Securit

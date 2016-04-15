@@ -5,7 +5,16 @@
     left:0;
     right:0;
 }
-
+.information{
+    margin-top:80px
+}
+.information img{
+    height: 350px;
+    width: 100%;
+}
+.information p{
+    margin: 100px 100px;
+}
 .top-products {
     margin-top: 141px;
 }

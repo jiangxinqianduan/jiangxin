@@ -1,0 +1,158 @@
+.address-header {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #8e8e8e;
+}
+
+.address-content {
+	margin-bottom: 20px;
+}
+
+.address-list {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.address-list li label {
+	font-weight: 500;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.other-address {
+	margin-left: 15px;
+}
+
+.new-address {
+	margin-left: 75px;
+}
+
+.buy-order-header {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.buy-order-topic {
+
+}
+
+.topic-header {
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: #8e8e8e;
+}
+
+.buy-order-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: #8e8e8e;
+}
+
+.recommand {
+	border-style: dotted;
+	border-width: 1px;
+	border-color: #8e8e8e;
+}
+
+.advice {
+	border-right-style: dotted;
+	border-right-width: 1px;
+	border-right-color: #8e8e8e;
+}
+
+.advice label {
+	font-size: 15px;
+}
+
+.advice textarea {
+	vertical-align: middle;
+    margin-top: 20px;
+	margin-bottom: 20px;
+	width: 400px;
+}
+
+.transport {
+	text-align: right;
+}
+
+.transport label {
+	margin-top: 30px;
+	margin-right: 50px;
+	font-size: 15px;
+}
+
+.total-money {
+	border-style: dotted;
+	border-width: 1px;
+	border-color: #8e8e8e;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.total-money label {
+	font-size: 15px;
+}
+
+.submit-order {
+    margin-top: 30px;
+}
+
+.submit-order-content {
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
+}
+
+.pay {
+	padding-top: 10px;
+	padding-right: 40px;
+}
+
+.pay label {
+	font-size: 15px;
+}
+
+.pay label label {
+	font-size: 25px;
+	color: red;
+}
+
+.post {
+	padding-top: 10px;
+	padding-right: 40px;
+}
+
+.post label {
+	font-size: 15px;
+}
+
+.post label label {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.receive {
+	padding-right: 40px;
+}
+
+.receive label {
+	font-size: 15px;
+}
+
+.receive label label {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.submit-button {
+	margin-bottom: 50px;
+}
+
+.btn-red {
+	background-color: red;
+	font-weight: bold;
+	color: white;
+	width: 150px;
+}

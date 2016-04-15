@@ -106,7 +106,7 @@ $g_id=$_GET['g_id'];
                         <label>特殊需求留言：</label>
                         <textarea name="message"></textarea>
                     </div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 transport">
                         <h4>运送方式：   快递     6.00</h4>
                     </div>
                 </div>
@@ -120,13 +120,13 @@ $g_id=$_GET['g_id'];
                 </div>
                 <div class="row submit-order text-right">
                     <div class="col-md-6 col-md-offset-6 submit-order-content">
-                        <div class="row">
+                        <div class="row pay">
                             <label>实付款：<label>72.00</label></label>
                         </div>
-                        <div class="row">
+                        <div class="row post">
                             <label>寄送至：<label>上海市中山北路3663号华东师范大学</label></label>
                         </div>
-                        <div class="row">
+                        <div class="row receive">
                             <label>收货人：<label>谢斌</label><label>13917829004</label></label>
                         </div>
                     </div>

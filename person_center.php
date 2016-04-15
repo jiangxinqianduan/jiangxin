@@ -17,7 +17,7 @@
     
     if(!$isLogin)
         header("Location:login.php");
-    $result=mysqli_query($con,"select u_id,u_money from user where u_name='".$user."'");
+    $result=mysqli_query($con,"select * from user where u_name='".$user."'");
     $row=mysqli_fetch_array($result);
     $user_id=$row['u_id'];
     ?>
@@ -79,7 +79,7 @@
                 <div class="col-md-10 person-content">
                     <div class="row login">
                         <div class="col-md-4 text-center">
-                            <img src="<?php echo $row['u_icon'];?>" alt="head_icon" class="img-circle">
+                            <img src="<?php echo $row['u_icon'];?>" alt="head_icon" class="img-circle" style="height: 100px;width: 100px;">
                         </div>
                         
                         <div class="col-md-4 text-center">
@@ -113,7 +113,7 @@
                             <hr align="center" size="3px">
                         </div>
                         <div class="row collect-content text-left">
-                           <ul class="list-inline collect-menu">
+                         <ul class="list-inline collect-menu">
                             <li>手工艺品筛选:</li>
                             <li><a href="">银饰</a></li>
                             <li><a href="">一体壶</a></li>
@@ -170,111 +170,154 @@
                         elseif ($type=="cart") {
                             $result=mysqli_query($con,"select * from good natural join cart  where u_name='".$user."';");
                             if($result)
-                            while($row=mysqli_fetch_array($result))
-                            {
-                                ?>
-                                <div class="row collect-item">
-                                    <div class="row collect-item-header">
+                                while($row=mysqli_fetch_array($result))
+                                {
+                                    ?>
+                                    <div class="row collect-item">
+                                        <div class="row collect-item-header">
+                                        </div>
+                                        <div class="row collect-item-content">
+                                            <div class="col-md-2 text-center">
+                                                <img src="<?php echo $row['g_pic'];?>">
+                                            </div>
+                                            <div class="col-md-6 text-left all-content">
+                                                <label>商品名称：<?php echo $row['g_name'];?></label>
+                                                <br>
+                                                <label>商品货号：<?php echo $row['g_id'];?></label>
+                                                <br>
+                                                <label>收藏时间：<?php echo $row['cart_time'];?></label>
+                                            </div>
+                                            <div class="col-md-2 text-center content-price">
+                                                <label><?php echo $row['g_price'];?></label>
+                                            </div>
+                                            <div class="col-md-2 text-center">
+                                                <a href="CommitOrder.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-blue">购买</button></a>
+                                                <h4><a href=".rmFromCart.php?g_id=<?php echo $row['g_id'];?>">移出购物车</a></h4>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="row collect-item-content">
-                                        <div class="col-md-2 text-center">
-                                            <img src="<?php echo $row['g_pic'];?>">
-                                        </div>
-                                        <div class="col-md-6 text-left all-content">
-                                            <label>商品名称：<?php echo $row['g_name'];?></label>
-                                            <br>
-                                            <label>商品货号：<?php echo $row['g_id'];?></label>
-                                            <br>
-                                            <label>收藏时间：<?php echo $row['cart_time'];?></label>
-                                        </div>
-                                        <div class="col-md-2 text-center content-price">
-                                            <label><?php echo $row['g_price'];?></label>
-                                        </div>
-                                        <div class="col-md-2 text-center">
-                                            <a href="CommitOrder.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-blue">购买</button></a>
-                                            <h4><a href=".rmFromCart.php?g_id=<?php echo $row['g_id'];?>">移出购物车</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php
+                                    <?php
+                                }
                             }
-                        }
-                        elseif($type="order")
-                        {
-                            $result=mysqli_query($con,"select * from good natural join good_order where u_name='".$user."';");
-                            if($result)
-                            while($row=mysqli_fetch_array($result))
+                            elseif($type="order"||$type=="havebuy")
                             {
-                                ?>
-                                <div class="row collect-item">
-                                    <div class="row collect-item-header">
-                                        <div class="col-md-2 text-center">
-                                            
+                                $result=mysqli_query($con,"select * from good natural join good_order where u_name='".$user."';");
+                                if($result)
+                                    while($row=mysqli_fetch_array($result))
+                                    {
+                                        ?>
+                                        <div class="row collect-item">
+                                            <div class="row collect-item-header">
+                                                <div class="col-md-2 text-center">
+                                                    
+                                                </div>
+                                                <div class="col-md-6 text-left">
+                                                    <label></label>
+                                                </div>
+                                            </div>
+                                            <div class="row collect-item-content">
+                                                <div class="col-md-2 text-center">
+                                                    <img src="<?php echo $row['g_pic'];?>">
+                                                </div>
+                                                <div class="col-md-6 text-left">
+                                                    <label><?php $row['g_name'];?></label>
+                                                    <p>订单编号：<?php echo $row['o_id'];?></p>
+                                                    <p>商品货号：<?php echo $row['g_id'];?></p>
+                                                    <p>下单时间：<?php echo $row['o_time']; ?></p>
+                                                </div>
+                                                <div class="col-md-2 text-center">
+                                                    <p><?php echo $row['g_price'];?></p>
+                                                </div>
+                                                <div class="col-md-2 text-center">
+                                                    <a href="product_identity.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-primary">查看商品</button></a>
+                                                    <h4><a href=".concelOrder.php?o_id=<?php echo $row['o_id'];?>">取消订单</a></h4>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6 text-left">
-                                            <label></label>
-                                        </div>
-                                    </div>
-                                    <div class="row collect-item-content">
-                                        <div class="col-md-2 text-center">
-                                            <img src="<?php echo $row['g_pic'];?>">
-                                        </div>
-                                        <div class="col-md-6 text-left">
-                                            <label><?php $row['g_name'];?></label>
-                                            <p>订单编号：<?php echo $row['o_id'];?></p>
-                                            <p>商品货号：<?php echo $row['g_id'];?></p>
-                                            <p>下单时间：<?php echo $row['o_time']; ?></p>
-                                        </div>
-                                        <div class="col-md-2 text-center">
-                                            <p><?php echo $row['g_price'];?></p>
-                                        </div>
-                                        <div class="col-md-2 text-center">
-                                            <button type="button" class="btn btn-primary">查看订单</button>
-                                            <h4>取消订单</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php
-                            }
-                        }
-                        else
-                        {
-                            echo "我的评论";
-                        }
+                                        <?php
+                                    }
+                                }
+                                else
+                                {
+                                    echo "我的评论";
+                                }
 
-                        ?>
-                    <div class="row proposal-header text-left">
-                    <h3>猜你喜欢</h3>
-                    </div>
-                    <hr>
-                 <div class="row proposal-content text-center">
-                    <?php 
-                    $result=mysqli_query($con,"select g_pic,g_name,g_price,g_sell from good limit 4");
-                    while($row=mysqli_fetch_array($result))
-                    {
-                        ?>
-                        <div class="col-md-3 text-center">
-                            <article class="proposal-main-content">
-                                <img src="<?php echo $row['g_pic'];?>" alt="feature1">
-                                <a href=""><h4 class="proposal-name"><?php echo $row['g_name'];?></h4></a>    
-                                <br>       
-                                <h4 class="proposal-price">￥<?php echo $row['g_price'];?></h4>
-                                <a href=""><h4 class="proposal-people">(已有<?php echo $row['g_sell']; ?>人购买）</h4></a>
-                            </article>
+                                ?>
+                                <div class="row page">
+                                    <div class="col-md-2 text-center">
+                                        <input type="checkbox"></input>
+                                        <label>全选</label>
+                                    </div>
+                                    <div class="col-md-3 text-left">
+                                        <button type="button" class="btn btn-default">取消收藏</button>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <ul class="page-item list-inline">
+                                            <li style="margin-right:4px">
+                                                <a href="">上一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="">4</a>
+                                            </li>
+                                            <li>
+                                                <a href="">5</a>
+                                            </li>
+                                            <li>...</li>
+                                            <li style="margin-left:10px">
+                                                <a href="">下一页</a>
+                                            </li>
+                                            <label style="margin-left: 6px">共10页</label>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-3">
+                                        <span>到第</span>
+                                        <input type="number" value="1" min="1" max="100"></input>
+                                        <span>页</span>
+                                        <button>确定</button>
+                                    </div>
+                                </div>
+                                <div class="row proposal-header text-left">
+                                    <h3>猜你喜欢</h3>
+                                </div>
+                                <hr>
+                                <div class="row proposal-content text-center">
+                                    <?php 
+                                    $result=mysqli_query($con,"select g_pic,g_name,g_price,g_sell from good limit 4");
+                                    while($row=mysqli_fetch_array($result))
+                                    {
+                                        ?>
+                                        <div class="col-md-3 text-center">
+                                            <article class="proposal-main-content">
+                                                <img src="<?php echo $row['g_pic'];?>" alt="feature1">
+                                                <a href=""><h4 class="proposal-name"><?php echo $row['g_name'];?></h4></a>    
+                                                <br>       
+                                                <h4 class="proposal-price">￥<?php echo $row['g_price'];?></h4>
+                                                <a href=""><h4 class="proposal-people">(已有<?php echo $row['g_sell']; ?>人购买）</h4></a>
+                                            </article>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>  
+                                </div>
+                                
+                            </div>
                         </div>
-                        <?php
-                    }
-                    ?>  
-                </div>
-               
-                </div>
-        </div>
-    </div>
+                    </div>
 
 
 
-<!-- Content end-->
+                    <!-- Content end-->
 
-<?php require("bottom.php");?>
-</body>
-</html>
+                    <?php require("bottom.php");?>
+                </body>
+                </html>

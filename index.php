@@ -43,7 +43,7 @@
             <div class="col-md-4 text-center line">
             </div>
             <div class="col-md-4 text-center">
-                <h1>FEATURED &nbsp ITEMS</h1>
+                <h1>特色 &nbsp 手工艺品</h1>
             </div>
             <div class="col-md-4 text-center line">
             </div>
@@ -94,7 +94,7 @@
         <div class="col-md-4 text-center line">
         </div>
         <div class="col-md-4 text-center">
-            <h1>LATEST &nbsp ITEMS</h1>
+            <h1>最新 &nbsp 手工艺品</h1>
         </div>
         <div class="col-md-4 text-center line">
         </div>
@@ -143,7 +143,7 @@
         <article class="theme-content">
             <div class="row">
                 <div class="col-md-8">
-                    <h3 class="theme-name">OXYGEN-ECOMMENT THEME</h3>
+                    <h3 class="theme-name">美物分享：留住春意盎然</h3>
                 </div>
                 <div class="col-md-4 text-right">
                     <button type="button" class="btn btn-default theme-button">theme</button>
@@ -151,7 +151,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <h4 class="theme-introduction">laklsdalsflaskfal</h4>
+                    <h4 class="theme-introduction">草树知春不久归，百般红紫斗芳菲。春将归去，我们又该怎样留住春意盎然？匠心借春日美物，为你找到答案。</h4>
                 </div>
             </div> 
         </article>
@@ -159,16 +159,16 @@
 
     <div class="row accessories">
         <div class="col-md-3 text-center">
-            <img src="images/hot-1_03.png" alt="accessories1">
+            <img src="images/1.png" alt="accessories1">
         </div>
         <div class="col-md-3 text-center">
-            <img src="images/hot-1_03.png" alt="accessories1">
+            <img src="images/2.png" alt="accessories1">
         </div>
         <div class="col-md-3 text-center">
-            <img src="images/hot-1_03.png" alt="accessories1">
+            <img src="images/3.png" alt="accessories1">
         </div>
         <div class="col-md-3 text-center">
-            <img src="images/hot-1_03.png" alt="accessories1">
+            <img src="images/4.png" alt="accessories1">
         </div>
     </div>
 
@@ -176,7 +176,7 @@
         <div class="col-md-4 text-center line">
         </div>
         <div class="col-md-4 text-center">
-            <h1>FEATURED &nbsp ITEMS</h1>
+            <h1>最热 &nbsp 手工艺品</h1>
         </div>
         <div class="col-md-4 text-center line">
         </div>
@@ -222,49 +222,49 @@
         ?>
         </div>
 
-        <div class="row random-products">
+       <div class="row random-products">
             <div class="col-md-3">
                 <ul class="group">
-                    <li><h3>Random Products</h3></li>
+                    <li><h3>寸彦同</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item1</a></li>
+                    <li><a href="#">磨砂一体壶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item2</a></li>
+                    <li><a href="#">锤痕一体壶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item3</a></li>
+                    <li><a href="#">仿古一体壶</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="group">
-                    <li><h3>Random Products</h3></li>
+                    <li><h3>张彩敬</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item1</a></li>
+                    <li><a href="#">烟壶小晶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item2</a></li>
+                    <li><a href="#">内画茶壶</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item3</a></li>
+                    <li><a href="#">内画鼻烟壶</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="group">
-                    <li><h3>Random Products</h3></li>
+                    <li><h3>刘永周</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item1</a></li>
+                    <li><a href="#">藏族皮影</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item2</a></li>
+                    <li><a href="#">傣族皮影</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item3</a></li>
+                    <li><a href="#">哈尼族皮影</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <ul class="group">
-                    <li><h3>Random Products</h3></li>
+                    <li><h3>马基淞</h3></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item1</a></li>
+                    <li><a href="#">木雕香炉</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item2</a></li>
+                    <li><a href="#">葫芦茶盘</a></li>
                     <hr align="center" width="80%">
-                    <li><a href="#">item3</a></li>
+                    <li><a href="#">藤编花器</a></li>
                 </ul>
             </div>
         </div>

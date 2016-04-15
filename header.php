@@ -30,7 +30,7 @@ if(isset($_SESSION['username']))$user=$_SESSION['username'];
                 <div class="row">
                     <div class="col-md-9">
                         <ul class="nav navbar-nav navbar">
-                            <li><a href="index.html">
+                            <li><a href="index.php">
                                 首页
                                 <b class="caret"></b>
                             </a>
@@ -76,9 +76,9 @@ if(isset($_SESSION['username']))$user=$_SESSION['username'];
                 </ul>
             </div>
             <div class="col-md-3 search">
-                <form>
-                    <input type="text" name="search" class="searchBox" title=""/>
-                    <input type="image" src="images/search_03.png" class="searchIcon"/>
+                <form action="search_product.php" method="get">
+                    <input type="text" name="filter" class="searchBox"/>
+                    <input type="submit" src="images/search_03.png" class="searchIcon"/>
                 </form>
             </div>
         </div>

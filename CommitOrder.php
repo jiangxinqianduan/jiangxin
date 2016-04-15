@@ -92,13 +92,13 @@ $g_id=$_GET['g_id'];
                         <a href="product_identity.php?g_id=<?php echo $g_id;?>"><h4>苗族银饰</h4></a>
                     </div>
                     <div class="col-md-2">
-                        <h4><?php echo $row['g_price'];?></h4>
+                        <h4 class="price"><?php echo $row['g_price'];?></h4>
                     </div>
                     <div class="col-md-2">
                         <input type="number" name="num" value="1" min="1" max="100">
                     </div>
                     <div class="col-md-2">
-                        <h4>68.00</h4>
+                        <h4 class="price-sum"></h4>
                     </div>
                 </div>  
                 <div class="row recommend">
@@ -108,7 +108,7 @@ $g_id=$_GET['g_id'];
                         <textarea name="message"></textarea>
                     </div>
                     <div class="col-md-6 transport">
-                        <h4>运送方式：   快递     6.00</h4>
+                        <h4>运送方式：   快递     <span class="trans">6.00</span></h4>
                     </div>
                 </div>
                 <div class="row total-money text-right">
@@ -116,13 +116,13 @@ $g_id=$_GET['g_id'];
                         <label>店铺合计（含运费）</label>
                     </div>
                     <div class="col-md-2">
-                        <label>74.00</label>
+                        <label class="total">74.00</label>
                     </div>
                 </div>
                 <div class="row submit-order text-right">
                     <div class="col-md-6 col-md-offset-6 submit-order-content">
                         <div class="row pay">
-                            <label>实付款：<label>72.00</label></label>
+                            <label>实付款：<label class="payy">72.00</label></label>
                         </div>
                         <div class="row post">
                             <label>寄送至：<label>上海市中山北路3663号华东师范大学</label></label>
@@ -140,5 +140,6 @@ $g_id=$_GET['g_id'];
         </div>
     </div>
     <?php require('bottom.php');?>
+    <script src="js/CommitOrder.js"></script>
 </body>
 </html>

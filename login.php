@@ -57,7 +57,7 @@
                 $_SESSION['username']=$user;
                 $_SESSION['isLogin']=true;
                 ?>
-                <script type="text/javascript">location.href='<?php echo $_SERVER['HTTP_REFERER'];?>';</script>
+                <script type="text/javascript">location.href='index.php';</script>
                 <?php
               }
             }

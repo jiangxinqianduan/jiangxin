@@ -54,9 +54,7 @@
               if(!$result||mysqli_num_rows($result)==0)echo "用户名或密码错误";
               else
               {
-                echo '登陆成功';
-                header('Location:index.php');
-                
+                header('Location:index.php');  
                 $_SESSION['username']=$user;
                 $_SESSION['isLogin']=true;
               }

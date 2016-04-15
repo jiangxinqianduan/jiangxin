@@ -8,11 +8,10 @@
 
 .information{
     margin-top:30px;
-
-
 }
 
 .information img{
+    margin-top: 80px;
     height: 350px;
     width: 100%;
 }

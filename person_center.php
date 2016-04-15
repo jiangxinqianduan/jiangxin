@@ -79,7 +79,7 @@
                 <div class="col-md-10 person-content">
                     <div class="row login">
                         <div class="col-md-4 text-center">
-                            <img src="images/hot-1_03.png" alt="head_icon" class="img-circle">
+                            <img src="<?php echo $row['u_icon'];?>" alt="head_icon" class="img-circle">
                         </div>
                         
                         <div class="col-md-4 text-center">
@@ -114,19 +114,19 @@
                         </div>
                         <div class="row collect-content text-left">
                            <ul class="list-inline collect-menu">
-                            <li>分类筛选:</li>
-                            <li><a href="">网站导航</a></li>
-                            <li><a href="">买家中心</a></li>
-                            <li><a href="">联系客服</a></li>
-                            <li><a href="">帮助</a></li>
+                            <li>手工艺品筛选:</li>
+                            <li><a href="">银饰</a></li>
+                            <li><a href="">一体壶</a></li>
+                            <li><a href="">扎染</a></li>
+                            <li><a href="">手工丝布</a></li>
                         </ul>
                         <hr align="center" width="90%">
                         <ul class="list-inline collect-menu">
-                            <li>分类筛选：</li>
-                            <li><a href="">网站导航</a></li>
-                            <li><a href="">买家中心</a></li>
-                            <li><a href="">联系客服</a></li>
-                            <li><a href="">帮助</a></li>
+                            <li>匠人筛选：</li>
+                            <li><a href="">寸颜同</a></li>
+                            <li><a href="">张彩敬</a></li>
+                            <li><a href="">刘永周</a></li>
+                            <li><a href="">马基淞</a></li>
                         </ul>
                     </div>
                     <div class="row attribute">
@@ -180,16 +180,18 @@
                                         <div class="col-md-2 text-center">
                                             <img src="<?php echo $row['g_pic'];?>">
                                         </div>
-                                        <div class="col-md-6 text-left">
-                                            <p>商品名称：<?php echo $row['g_name'];?></p>
-                                            <p>商品货号：<?php echo $row['g_id'];?></p>
-                                            <p>收藏时间：<?php echo $row['cart_time'];?></p>
+                                        <div class="col-md-6 text-left all-content">
+                                            <label>商品名称：<?php echo $row['g_name'];?></label>
+                                            <br>
+                                            <label>商品货号：<?php echo $row['g_id'];?></label>
+                                            <br>
+                                            <label>收藏时间：<?php echo $row['cart_time'];?></label>
+                                        </div>
+                                        <div class="col-md-2 text-center content-price">
+                                            <label><?php echo $row['g_price'];?></label>
                                         </div>
                                         <div class="col-md-2 text-center">
-                                            <p><?php echo $row['g_price'];?></p>
-                                        </div>
-                                        <div class="col-md-2 text-center">
-                                            <a href="CommitOrder.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-primary">购买</button></a>
+                                            <a href="CommitOrder.php?g_id=<?php echo $row['g_id'];?>"><button type="button" class="btn btn-blue">购买</button></a>
                                             <h4><a href=".rmFromCart.php?g_id=<?php echo $row['g_id'];?>">移出购物车</a></h4>
                                         </div>
                                     </div>
@@ -241,14 +243,11 @@
                         }
 
                         ?>
-                    </div>
-                </div>
-                <div class="row proposal-header text-left">
+                    <div class="row proposal-header text-left">
                     <h3>猜你喜欢</h3>
-                </div>
-                <hr>
-
-                <div class="row proposal-content text-center">
+                    </div>
+                    <hr>
+                 <div class="row proposal-content text-center">
                     <?php 
                     $result=mysqli_query($con,"select g_pic,g_name,g_price,g_sell from good limit 4");
                     while($row=mysqli_fetch_array($result))
@@ -267,15 +266,14 @@
                     }
                     ?>  
                 </div>
-            </div>
+               
+                </div>
         </div>
     </div>
 
 
-</div>
 
 <!-- Content end-->
-</div>
 
 <?php require("bottom.php");?>
 </body>

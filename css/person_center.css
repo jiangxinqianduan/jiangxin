@@ -1,3 +1,7 @@
+body {
+	font-family: 微软雅黑;
+}
+
 .person_center_background {
 	background-image:url(../images/bg.png);
 	background-position: center;
@@ -9,18 +13,19 @@
 }
 
 .person-menu {
-    margin-top: 40px;
     width: 200px;
+    margin-left: 100px;
+    margin-right: 10px;
 }
 
 .menu-list {
-	border-color: #000000;
+	border-color: #8e8e8e;
 	border-style: solid;
 	border-width: 2px;
 }
 
 .menu-list thead tr td {
-	border-color: #000000;
+	border-color: #6c6c6c;
 	border-style: solid;
 	border-width: 2px;
 	background-color: orange;
@@ -38,22 +43,27 @@
 }
 
 .person-content {
-
+	padding-right:50px;
 }
 
 .login {
 	border-style: solid;
 	border-width: 2px;
-	border-color: #000000;
+	border-color: #8e8e8e;
 }
 
 .collect-header {
+	margin-top: 10px;
+}
 
+.collect-header h3 {
+	font-weight: bold;
+	font-size: 30px;
 }
 
 .collect-content {
 	border-width: 2px;
-	border-color: #000000;
+	border-color: #8e8e8e;
 	border-style: solid;
 }
 
@@ -65,11 +75,17 @@
 .collect-menu li {
 	padding-left: 80px;
 	padding-right: 80px;
+	font-size: 20px;
+}
+
+.collect-menu li a {
+	font-size: 20px;
+	color: #6c6c6c;
 }
 
 .attribute {
-	margin-top: 30px;
-	background-color: #888888
+	margin-top: 40px;
+	background-color: #e0e0e0;
 }
 
 .collect-item {
@@ -107,7 +123,8 @@
 }
 
 .proposal-header {
-	margin-top: 30px;
+	margin-top: 40px;
+	font-weight: 600;
 }
 
 .proposal-content {
@@ -115,7 +132,7 @@
 }
 
 .proposal-main-content {
-	border-color: #ffffff;
+	border-color: #8e8e8e;
 	border-width: 2px;
 	border-style: solid;
     margin-left:5px;
@@ -145,4 +162,34 @@
 .point {
 	cursor: pointer;
 	font-size: 100px;
+}
+
+.all-content {
+	padding-top:70px;
+	vertical-align: middle;
+}
+
+.all-content label {
+	vertical-align: middle;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.content-price {
+	padding-top:90px;
+	vertical-align: middle;
+}
+
+.content-price label {
+	vertical-align: middle;
+	font-size: 40px;
+	font-weight: 500;
+	color: red;
+}
+
+.btn-blue {
+	color:white;
+	width: 120px;
+	background: red;
+	margin-top: 90px;
 }

@@ -54,9 +54,11 @@
               if(!$result||mysqli_num_rows($result)==0)echo "用户名或密码错误";
               else
               {
-                header('Location:index.php');  
                 $_SESSION['username']=$user;
                 $_SESSION['isLogin']=true;
+                ?>
+                <script type="text/javascript">location.href='<?php echo $_SERVER['HTTP_REFERER'];?>';</script>
+                <?php
               }
             }
             if($lgORre=='register')

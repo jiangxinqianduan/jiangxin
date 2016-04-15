@@ -23,7 +23,7 @@ if(isset($_SESSION['username']))$user=$_SESSION['username'];
                         else
                             echo '<li>欢迎,<a href="person_center.php">'.$user.'</a>'
                             ?>
-                        <li><a href="">联系客服</a></li>
+                        <li><a href=".logout.php">注销</a></li>
                         <li><a href="">帮助</a></li>
                     </ul>
                 </div>

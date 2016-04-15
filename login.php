@@ -7,6 +7,7 @@
   <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <link href="css/index.css" rel="stylesheet">
   <link href="css/new.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bottom.css">
 
   <title>匠心传承</title>
 </head>
@@ -48,7 +49,7 @@
             if( mysqli_connect_errno($con))echo '目前无法连接到数据库，请联系系统管理员。';
             if($lgORre=='login')
             {   
-              $result=mysqli_query($con,"select u_name from user where u_name='$user' and u_pwd='$password'");
+              $result=mysqli_query($con,"select u_name from user where u_name='".$user."' and u_pwd='".$password."'");
               if(!$result||mysqli_num_rows($result)==0)echo "用户名或密码错误";
               else
               {
@@ -85,7 +86,7 @@
             <input type="hidden" name="lgORre" value="login"></input>
             </div>
             <br>
-            <button type="button" class="btn btn-success" style="margin-top:0px;margin-left: 75px;width: 80px;">登陆</button>
+            <button type="submit" class="btn btn-success" style="margin-top:0px;margin-left: 75px;width: 80px;">登陆</button>
           </form>
 
         </div>
@@ -95,7 +96,7 @@
           <input type="password" name="password" style="margin-top:15px;margin-left:75px">
           <input type="hidden" name="lgORre" value="register"></input>
           <br>
-          <input type="submit" value="注册" style="margin-top:15px;margin-left: 75px">
+          <button type="submit" class="btn btn-success" style="margin-top:0px;margin-left: 75px;width: 80px;">注册</button>
 
         </form>
     </div>

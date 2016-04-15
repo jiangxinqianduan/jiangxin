@@ -108,7 +108,7 @@ $g_id=$_GET['g_id'];
                         <textarea name="message"></textarea>
                     </div>
                     <div class="col-md-6 transport">
-                        <h4>运送方式：   快递     <span class="trans">6.00</span></h4>
+                        <h4>运送方式：   快递     <span class="trans">5.00</span></h4>
                     </div>
                 </div>
                 <div class="row total-money text-right">
